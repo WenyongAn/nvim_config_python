@@ -3,7 +3,7 @@ docker pull debian:bookworm-slim
 
 apt install curl
 apt install git
-apt install fd-find
+apt install fd-find fzf ripgrep
 
 curl -fsSL https://deb.nodesource.com/setup_current.x -o nodesource_setup.sh
 bash nodesource_setup.sh
