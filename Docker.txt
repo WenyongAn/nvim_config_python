@@ -4,6 +4,10 @@ docker pull debian:bookworm-slim
 apt install curl
 apt install git
 apt install fd-find fzf ripgrep
+# below is for building python with pyenv
+apt install build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl git \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
 curl -fsSL https://deb.nodesource.com/setup_current.x -o nodesource_setup.sh
 bash nodesource_setup.sh
@@ -31,9 +35,11 @@ eval "$(pyenv init -)"
 # the following to ~/.bashrc:
 eval "$(pyenv virtualenv-init -)"
 
+pyenv install 3.10.15
+
 git clone https://github.com/WenyongAn/nvim_config_python.git
 
-apt install python3.11-venv
+#apt install python3.11-venv
 
 # image from Docker Hub
 wenyongan/nvim-container
