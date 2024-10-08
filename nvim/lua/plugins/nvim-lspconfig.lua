@@ -127,7 +127,15 @@ return {
 		end
 
 		require("mason-tool-installer").setup({
-			ensure_installed = { "lua_ls", "pyright", "pylint", "black", "isort", "prettier" },
+			ensure_installed = {
+				"lua_ls",
+				"pyright",
+				"pylint",
+				"black",
+				"isort",
+				"prettier",
+				"ruff-lsp",
+			},
 		})
 
 		mason_lspconfig.setup_handlers({
